@@ -1,0 +1,203 @@
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  color:var(--dark); 
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+.mainNav {
+  position:fixed; 
+  z-index:100; 
+  width:100%; 
+  padding:1rem 2rem;
+  transition:var(--transition);
+}
+
+.navList {
+  display:flex; 
+  justify-content: center;
+  list-style: none;
+  gap:2rem; 
+}
+
+.navItem-1 {
+  margin-left:-78px; 
+}
+
+.navLink {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navLink:link, 
+.navLink:visited, 
+.navLink:active {
+  color:#eff5f7;
+  transition: var(--transition);
+}
+
+.applyBackground {
+  background-color:rgba(237, 248, 249, 0.752);
+  box-shadow: 0 3px 2px rgba(10, 15, 54, .1);
+}
+
+.applyBackground .navLink:link, 
+.applyBackground .navLink:visited, 
+.applyBackground .navLink:active {
+  color: #002A32;
+  font-weight: 600;
+}
+
+.hero {
+  background-image: url('images/duy-pham-Cecb0_8Hx-o-unsplash.jpg');
+  background-size:cover; 
+  background-position: center center;
+  height:100vh;
+  display:grid;
+  place-items: center;
+  text-align: center;
+  color:#eff5f7;
+  position:relative;
+}
+
+.hero::after {
+  content:''; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  right:0; 
+  bottom:0; 
+  background:linear-gradient(180deg, rgba(18, 90, 166, 0.3393732492997199) 0%, 
+  rgba(198, 212, 197, 0.15449929971988796) 100%);
+  z-index:0; 
+}
+
+.hero_content {
+  position:relative;
+  z-index:1; 
+}
+
+.hero_content h1 {
+  font-size: 3.5rem; 
+}
+
+.hero_content p {
+  font-size: 1.5rem;
+}
+
+.hero_arrow {
+  position:absolute; 
+  bottom:5px; 
+  z-index:1; 
+}
+
+.hero_arrow:link, 
+.hero_arrow:visited, 
+.hero_arrow:active {
+  color: #eff5f7;
+}
+
+.hero_arrow:hover,
+.hero_arrow:focus {
+  outline:none; 
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin:2rem 2rem 1.5rem;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  display:block; 
+  width:calc(100% - 4rem); 
+  max-width:500px; 
+  padding:.5rem .8rem; 
+  margin:0 auto;
+  border-bottom: 3px solid #6b7577;
+}
+
+input:focus {
+  outline: none; 
+  border-bottom: 3px solid #002A32;
+}
+
+input::placeholder {
+  color:#002A32;
+}
+
+.blog-posts {
+  display:grid; 
+  place-items: center;
+  padding:2.5rem 2rem;
+  max-width: 1000px;
+  margin:auto;
+}
+
+.blog-posts .card-wrapper {
+  display:grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap:2rem; 
+}
+
+.blog-posts .card {
+ position:relative; 
+ display:grid; 
+ align-content: space-between;
+ height:400px;
+ overflow:hidden; 
+}
+
+.blog-posts .card-text {
+  opacity:0; 
+  padding:1.5rem; 
+  transition:all 200ms ease-in-out;
+}
+
+
+.card_image {
+  position: absolute;
+  top:0; 
+  left:0; 
+  right:0; 
+  bottom:0;
+  width:100%;
+  height:100%; 
+  object-fit: cover;
+  z-index: -1;
+  transition:all 200ms ease-in-out;
+}
+
+.card_meta {
+  background-color:rgba(237, 248, 249, 0.752);
+  padding:1.5rem; 
+  transition:all 200ms ease-in-out;
+}
+
+.card_meta_title {
+  font-size: 1.2rem;
+  display:block; 
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color:#002A32; 
+  text-decoration: none;
+}
+
+.card_meta_taglist {
+  display:flex; 
+  flex-wrap: wrap;
+  list-style: none;
+  gap:.5rem; 
+}
+
+.card_meta_taglist_item {
+  padding: .5rem .9rem; 
+  background-color: #002A32;
+  color:#eff5f7; 
+  text-decoration: none;
+}
+
